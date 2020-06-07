@@ -1,0 +1,24 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sun May 31 13:37:11 2020
+
+@author: bryceskelton
+"""
+
+
+def shopping_list(s_list = [], items= ""):
+
+    while items.lower().startswith("done") != True:
+        items = input("Please enter a grocery item you need to buy, when finished enter \"done\": ")
+        if items != "done":
+            s_list.append(items)
+        else:
+            for items in s_list:
+                print("[ ]", items)
+            return True
+
+shopping_list()
+
+
+                
